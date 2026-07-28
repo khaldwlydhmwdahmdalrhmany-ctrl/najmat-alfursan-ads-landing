@@ -1,0 +1,119 @@
+:root {
+  --ink: #0b0b0c;
+  --ink-soft: #18181b;
+  --ink-line: rgba(255, 255, 255, 0.1);
+  --gold: #ffc627;
+  --gold-deep: #e8920c;
+  --paper: #ffffff;
+  --mist: #f4f4f2;
+  --steel: #4b4f56;
+  --steel-soft: #787c82;
+  --line: #e7e6e2;
+  --radius: 4px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Almarai", sans-serif;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+.mono {
+  font-family: "IBM Plex Mono", monospace;
+  direction: ltr;
+  display: inline-block;
+}
+
+.wrap {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+@media (max-width: 640px) {
+  .wrap {
+    padding: 0 18px;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: var(--radius);
+  font-weight: 700;
+  font-size: 14.5px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  border: 1.5px solid transparent;
+}
+
+.btn svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: var(--ink);
+}
+.btn-gold:hover {
+  background: var(--paper);
+}
+
+.btn-ghost-dark {
+  border-color: rgba(255, 255, 255, 0.28);
+  color: var(--paper);
+}
+.btn-ghost-dark:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.btn-outline {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+.btn-outline:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
